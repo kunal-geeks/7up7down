@@ -1,21 +1,25 @@
-// src/store.js
-import { createStore } from 'redux';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    points: 5000
+    points: 5000,
 };
 
-function gameReducer(state = initialState, action) {
-    switch (action.type) {
-        case 'UPDATE_POINTS':
-            return {
-                ...state,
-                points: action.payload
-            };
-        default:
-            return state;
-    }
-}
+const gameSlice = createSlice({
+    name: 'game',
+    initialState,
+    reducers: {
+        updatePoints: (state, action) => {
+            state.points = action.payload;
+        },
+    },
+});
 
-const store = createStore(gameReducer);
+export const { updatePoints } = gameSlice.actions;
+
+const store = configureStore({
+    reducer: {
+        game: gameSlice.reducer,
+    },
+});
+
 export default store;
