@@ -111,5 +111,4 @@ Made with ❤️ by Kunal Sharma
 - **Running the Project:** Detailed steps to run the frontend and backend.
 - **API Endpoints:** Clear documentation for the main API endpoint.
 - **Project Structure:** Overview of the project directory structure.
-- **UI Components:** Explanation and code for the main UI component.
 - **License:** Information about the project license.
