@@ -52,7 +52,7 @@ cd ../7up7down-client
 npm start
 ```
 
-# The frontend should now be running on http://localhost:3000 and the backend on http://localhost:5000.
+The frontend should now be running on http://localhost:3000 and the backend on http://localhost:5000.
 
 📄 API Endpoints
 Roll Dice
@@ -61,11 +61,14 @@ Method: POST
 Description: Rolls two dice and calculates the result based on the bet.
 
 Request Body:
+```json
 {
   "betAmount": 100,
   "betChoice": "7 Up"
 }
+```
 Response:
+```json
 {
   "dice1": 3,
   "dice2": 4,
@@ -73,7 +76,7 @@ Response:
   "pointsChange": -100,
   "playerPoints": 4900
 }
-
+```
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
