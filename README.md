@@ -57,8 +57,11 @@ The frontend should now be running on http://localhost:3000 and the backend on h
 📄 API Endpoints
 
 -Roll Dice
+
 -URL: /roll-dice
+
 -Method: POST
+
 -Description: Rolls two dice and calculates the result based on the bet.
 
 Request Body:
