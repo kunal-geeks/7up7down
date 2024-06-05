@@ -1,0 +1,17 @@
+{
+  "name": "7up7down",
+  "version": "1.0.0",
+  "description": "This is a dice game where the host throws the dice and the players bet on 3 numbers - numbers below 7, 7 and numbers above 7. On numbers below and above 7 the players get double their stake and on 7 the players get 5 times their stake.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
