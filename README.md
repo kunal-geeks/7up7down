@@ -77,6 +77,28 @@ Response:
   "playerPoints": 4900
 }
 ```
+📂 Project Structure
+7up7down/
+├── 7up7down-client/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Game.js
+│   │   ├── store.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── App.css
+│   ├── public/
+│   ├── package.json
+│   └── ...
+├── 7up7down-server/
+│   ├── server.js
+│   ├── routes/
+│   │   └── dice.js
+│   ├── package.json
+│   └── ...
+├── README.md
+└── ...
+
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
