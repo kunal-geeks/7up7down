@@ -78,6 +78,7 @@ Response:
 }
 ```
 📂 Project Structure
+```bash
 7up7down/
 ├── 7up7down-client/
 │   ├── src/
@@ -98,7 +99,7 @@ Response:
 │   └── ...
 ├── README.md
 └── ...
-
+```
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
