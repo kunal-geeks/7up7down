@@ -21,14 +21,15 @@ Welcome to the 7 Up 7 Down game! This is a simple dice game where players bet on
 
 ## 📦 Installation
 
-Clone the repository:
+-Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/7up7down.git
 cd 7up7down
+```
 
 
-Install dependencies for both frontend and backend:
+-Install dependencies for both frontend and backend:
 
 ```bash
 cd 7up7down-client
