@@ -56,15 +56,13 @@ Roll Dice
 URL: /roll-dice
 Method: POST
 Description: Rolls two dice and calculates the result based on the bet.
-Request Body:
 
-```json
+Request Body:
 {
   "betAmount": 100,
   "betChoice": "7 Up"
-
+}
 Response:
-```json
 {
   "dice1": 3,
   "dice2": 4,
@@ -85,4 +83,3 @@ Made with ❤️ by Kunal Sharma
 - **Project Structure:** Overview of the project directory structure.
 - **UI Components:** Explanation and code for the main UI component.
 - **License:** Information about the project license.
-}
