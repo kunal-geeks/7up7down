@@ -55,10 +55,11 @@ npm start
 The frontend should now be running on http://localhost:3000 and the backend on http://localhost:5000.
 
 📄 API Endpoints
-Roll Dice
-URL: /roll-dice
-Method: POST
-Description: Rolls two dice and calculates the result based on the bet.
+
+-Roll Dice
+-URL: /roll-dice
+-Method: POST
+-Description: Rolls two dice and calculates the result based on the bet.
 
 Request Body:
 ```json
