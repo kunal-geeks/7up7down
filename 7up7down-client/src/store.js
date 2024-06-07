@@ -1,12 +1,11 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-    points: 5000,
-};
-
+// Create a slice for the game state
 const gameSlice = createSlice({
     name: 'game',
-    initialState,
+    initialState: {
+        points: 5000,
+    },
     reducers: {
         updatePoints: (state, action) => {
             state.points = action.payload;
@@ -14,8 +13,10 @@ const gameSlice = createSlice({
     },
 });
 
+// Export the action
 export const { updatePoints } = gameSlice.actions;
 
+// Create the store
 const store = configureStore({
     reducer: {
         game: gameSlice.reducer,

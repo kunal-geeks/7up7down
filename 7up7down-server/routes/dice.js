@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+
 router.post('/', (req, res) => {
-    const { betAmount, betChoice } = req.body;
+    const { betAmount, betChoice, currentPoints } = req.body;
 
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
@@ -24,15 +25,16 @@ router.post('/', (req, res) => {
         pointsChange = betChoice === '7 Up' ? betAmount * 2 : -betAmount;
     }
 
-    const playerPoints = Math.max(0, 5000 + pointsChange);  // Adjust initial points as necessary
+    const newPoints = currentPoints + pointsChange;
 
     res.json({
         dice1,
         dice2,
         result,
         pointsChange,
-        playerPoints
+        playerPoints: newPoints,
     });
+
 });
 
 module.exports = router;

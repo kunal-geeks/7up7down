@@ -1,24 +1,101 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes pop-in {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
   }
-  
-  .game-card {
-    max-width: 400px;
-    width: 100%;
-    margin-top: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  100% {
+      transform: scale(1);
+      opacity: 1;
   }
-  
-  .form-control {
-    margin: 20px;
-    min-width: 120px;
-  }
-  
-  .roll-button {
-    margin-top: 20px;
-  }
-  
+}
+
+.form-control {
+  margin: 20px;
+  min-width: 200px; 
+  width: 40%; 
+  font-size: 1.5em;
+}
+
+.roll-button {
+  margin-top: 60px; 
+  width: 80%; 
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.dice-result {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Added gap between the dice */
+}
+
+.dice {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 2em;
+  position: relative;
+  animation: none;
+  transform-style: preserve-3d;
+  margin-bottom: 4px;
+}
+
+.dice.rolling {
+  animation: roll-animation 0.5s ease-in-out infinite;
+}
+
+@keyframes roll-animation {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.dice-1::before { content: '⚀'; font-size: 3em; padding-bottom: 12px; }
+.dice-2::before { content: '⚁'; font-size: 3em; padding-bottom: 12px; }
+.dice-3::before { content: '⚂'; font-size: 3em; padding-bottom: 12px; }
+.dice-4::before { content: '⚃'; font-size: 3em; padding-bottom: 12px; }
+.dice-5::before { content: '⚄'; font-size: 3em; padding-bottom: 12px; }
+.dice-6::before { content: '⚅'; font-size: 3em; padding-bottom: 12px; }
+
+.result-container {
+  margin-top: 20px;
+}
