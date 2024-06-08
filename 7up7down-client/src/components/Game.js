@@ -6,6 +6,8 @@ import { updatePoints } from '../store';
 import { Howl } from 'howler';
 import './Game.css';
 
+const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 // Load sounds
 const rollSound = new Howl({ src: ['/sounds/dice-roll.mp3'], volume: 0.9 });
 const backgroundMusic = new Howl({ src: ['/sounds/game-music.mp3'], loop: true, volume: 0.1 });
@@ -19,7 +21,8 @@ const Game = () => {
     const [diceResult, setDiceResult] = useState({ dice1: 6, dice2: 6, result: '', pointsChange: 0 });
     const [rolling, setRolling] = useState(false);
     const [resultVisible, setResultVisible] = useState(false);
-
+    const [gameStarted, setGameStarted] = useState(false);
+    
     // Play background music
     React.useEffect(() => {
         backgroundMusic.play();
@@ -30,20 +33,25 @@ const Game = () => {
 
     const handleRollDice = async () => {
         setRolling(true);
-        rollSound.play();
+        try {
+            rollSound.play();
 
-        const response = await axios.post('http://localhost:5000/roll-dice', {
-            betAmount,
-            betChoice,
-            currentPoints: points
-        });
-
-        setTimeout(() => {
-            setDiceResult(response.data);
-            dispatch(updatePoints(response.data.playerPoints));
-            setRolling(false);
-            setResultVisible(true);
-        }, 500); // simulate rolling time
+            const response = await axios.post(`${apiUrl}/roll-dice`, {
+                betAmount,
+                betChoice,
+                currentPoints: points
+            });
+    
+            setTimeout(() => {
+                setDiceResult(response.data);
+                dispatch(updatePoints(response.data.playerPoints));
+                setRolling(false);
+                setResultVisible(true);
+            }, 500); // simulate rolling time
+            
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     const handleBetAmountChange = (e) => {

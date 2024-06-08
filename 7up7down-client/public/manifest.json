@@ -1,0 +1,16 @@
+{
+    "short_name": "7Up7Down",
+    "name": "7 Up 7 Down Game",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  
