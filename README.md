@@ -24,7 +24,7 @@ Welcome to the 7 Up 7 Down game! This is a simple dice game where players bet on
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/7up7down.git
+git clone https://github.com/kunal-geeks/7up7down.git
 cd 7up7down
 ```
 
