@@ -2,6 +2,8 @@
 
 Welcome to the 7 Up 7 Down game! This is a simple dice game where players bet on the outcome of the dice roll. Bet on numbers below 7, 7, or numbers above 7. Players win double their stake for numbers below and above 7, and five times their stake for 7.
 
+for demo visit at https://7up7down-client.vercel.app/
+
 ## 🚀 Features
 - Start with 5000 points
 - Place bets of 100, 200, or 500 points
